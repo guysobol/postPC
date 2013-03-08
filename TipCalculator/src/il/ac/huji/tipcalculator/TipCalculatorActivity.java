@@ -16,6 +16,7 @@ public class TipCalculatorActivity extends Activity {
 	
 	private final double TIP_PERSENTAGE = 0.12;
 	private final String DECIMAL_FORMAT = "#.##";
+	private final int MIN_FRACTION_NUM = 2;
 	
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -60,6 +61,7 @@ public class TipCalculatorActivity extends Activity {
 					        }
 					        else{
 					        	DecimalFormat df = new DecimalFormat(DECIMAL_FORMAT);
+					        	df.setMinimumFractionDigits(MIN_FRACTION_NUM);
 					        	res = df.format(tip);
 					        }
 					        
